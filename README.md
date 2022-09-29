@@ -8,9 +8,9 @@ Needed libraries:
 - Tensorflow
 - Numpy
 - Keras_tuner (optional)
-+++
+
 ## heart.csv
-+++
+
 This dataset was created by combining different datasets already available independently but not combined before. In this dataset, 5 heart datasets are combined over 11 common features which makes it the largest heart disease dataset available so far for research purposes. The five datasets used for its curation are:
 
 - Cleveland: 303 observations
@@ -27,7 +27,7 @@ Final dataset: 918 observations
 Every dataset used can be found under the Index of heart disease datasets from UCI Machine Learning Repository on the following link: https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/
 **note:**Most features in the dataset are represented with abbreviations which might be unclear, for further clarification refer to dataset description in [this](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) link.
 ## heart.py
-+++
+
 The code in this file is consisted of 2 major parts:
 1. Data Visualization using matplotlib module
 2. Creating, Training and Testing a Neural Network model using Keras module
