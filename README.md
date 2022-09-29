@@ -25,7 +25,8 @@ Duplicated: 272 observations
 Final dataset: 918 observations
 
 Every dataset used can be found under the Index of heart disease datasets from UCI Machine Learning Repository on the following link: https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/
-**note:**Most features in the dataset are represented with abbreviations which might be unclear, for further clarification refer to dataset description in [this](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) link.
+
+**note:** Most features in the dataset are represented with abbreviations which might be unclear, for further clarification refer to dataset description in [this](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) link.
 ## heart.py
 
 The code in this file is consisted of 2 major parts:
