@@ -44,7 +44,8 @@ pies=['Sex','ChestPainType','RestingECG','ST_Slope','FastingBS','ExerciseAngina'
  hists=['Age','RestingBP','Cholesterol','MaxHR','Oldpeak']
 ```
 The colors, fonts and other plot decorations were obtained by playing around the parameters. Any change in that makes them look better is very much appreciated. :)
-**note:**While the plot figure is open the code will NOT move on to the next lines so make sure to close it after looking at the data.
+
+**note:** While the plot figure is open the code will NOT move on to the next lines so make sure to close it after looking at the data.
 
 ### Neural Network Model:
 **Preparing the data:**
@@ -52,13 +53,19 @@ Before getting to creating and training the model the dataset should undergo som
 1. Deleting any NaN values using ```DataFrame.dropna()```
 2. The alphabetical labels were changed into numbers (e.g M-->0 and F-->1)
 3. The dataset was split into train (85%) and test (15%)
+4. 
 **Creating the model and setting hyper parameters:**
 First the model function was created as ```def MyModel(hp)``` and the hyper parameters were tuned using Keras_tuner's Hyperband class. The part for tuning is provided in the code but it is commented out which can be used for finding even better hyperparameters.
+
 RandomSearch and BayesianSearch classes for finding hyperparams were also tested but didn't return such high of a```val_accuracy``` as Hyperband did.
+
 After playing around with hyper parameters, optimizers and loss function about 89-91% of val_accuracy and 83-84% of test_data accuracy was achieved in early tests. By reducing batch_size (which significantly increases calculation time) and also playing around with Adamdelta's parameters I could increase the accuracy on test data to 84-87% percent.
+
 For preventing overfitting and resource overuse an earlystopper was also set and tested multiple times (I changed the patience and min_delta parameters several times to achieve good results) and epochs were set to 200 but that number of epochs is not usually reached. 
+
 After the model summaries are returned a random sample of size 1 is taken from the dataset and is fed into the model for the user to see the actual outputs of the model.
 I also set a conditional for explaining the output as follows:
+
 ```
 if prob>0.8:
     print("This person will most probably be diagnosed with some kind of heart disease.")
